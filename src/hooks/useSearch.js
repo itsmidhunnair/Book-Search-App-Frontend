@@ -22,7 +22,10 @@ const useSearch = (searchBooks) => {
   const nextButton = (page) => {
     console.log(index);
     index = page;
-    navigate(`/${searchResult}/${index}`);
+    setSearchParams({
+      search: searchResult,
+      index: index,
+    });
     // searchBooks({ variables: { input: { search: searchResult, index } } });
   };
 
