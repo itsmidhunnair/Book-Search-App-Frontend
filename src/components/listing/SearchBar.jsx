@@ -38,7 +38,7 @@ const SearchBar = ({ submitSearch, search }) => {
               label="Search"
               defaultValue={search}
               {...register("search", { required: true })}
-              sx={{ width: 600, marginTop: "15px", bgcolor: "#fff" }}
+              sx={{width:"100%", marginTop: "15px", bgcolor: "#fff" }}
               InputLabelProps={{
                 style: {
                   backgroundColor: "#fff",

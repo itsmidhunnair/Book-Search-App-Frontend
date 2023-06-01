@@ -13,13 +13,13 @@ import SortComp from './SortComp';
 import FilterComp from './FilterComp';
 import { useSelector } from 'react-redux';
 
-const Books = ({ books, nextButton, activePage }) => {
+const Books = ({search, books, nextButton, activePage }) => {
   const navigate = useNavigate();
 
   const { editedBooks, searchedBooks } = useSelector((state) => state.book);
 
   const pageChangeHandler = (event, pageNumber = 1) => {
-    nextButton(pageNumber);
+    nextButton(search, pageNumber);
   };
 
   return (

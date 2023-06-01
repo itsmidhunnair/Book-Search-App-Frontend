@@ -1,7 +1,6 @@
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 
 let index = 1;
-let searchResult;
 
 const useSearch = (searchBooks) => {
 
@@ -11,7 +10,6 @@ const useSearch = (searchBooks) => {
 
   const submitSearch = ({ search }) => {
     index = 1;
-    searchResult = search;
     setSearchParams({
       search: search,
       index: 1
@@ -19,11 +17,11 @@ const useSearch = (searchBooks) => {
     // navigate(`/${search}/1`);
   };
   
-  const nextButton = (page) => {
+  const nextButton = (search, page) => {
     console.log(index);
     index = page;
     setSearchParams({
-      search: searchResult,
+      search: search,
       index: index,
     });
     // searchBooks({ variables: { input: { search: searchResult, index } } });

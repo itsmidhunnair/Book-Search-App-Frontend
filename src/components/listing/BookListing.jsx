@@ -58,7 +58,7 @@ const BookListing = () => {
       ) : !loading && _.size(editedBooks) === 0 ? (
         <h1 style={{ textAlign: 'center' }}>No Books Found...</h1>
       ) : (
-        <Books books={editedBooks} nextButton={nextButton} activePage={index} />
+        <Books books={editedBooks} search={search} nextButton={nextButton} activePage={index} />
       )}
     </>
   );
