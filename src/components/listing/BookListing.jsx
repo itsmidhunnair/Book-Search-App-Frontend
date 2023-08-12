@@ -9,15 +9,17 @@ import { searchBookQuery } from '../../graphQl/query';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBooks } from '../../store/slice';
 import Loader from '../common/Loader';
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
+/**
+ * Product Listing Component
+ */
 const BookListing = () => {
 
   const dispatch = useDispatch();
 
   let [searchParams] = useSearchParams()
 
-  
   const { editedBooks } = useSelector((state) => state.book);
   
   const [searchBooks, { data: books, loading, error }] =
@@ -25,11 +27,12 @@ const BookListing = () => {
   
   const { submitSearch, nextButton } = useSearch(searchBooks);
   
+  /**
+   * Get search queries from url
+   */
   const filter = searchParams.get('filter');
   const search = searchParams.get('search');
-  const index = parseInt(searchParams.get('index'));
-
-  console.log(search, index);
+  const index = parseInt(searchParams.get('index')||1)*10 - 9;
 
   useEffect(() => {
     if (search && index) {

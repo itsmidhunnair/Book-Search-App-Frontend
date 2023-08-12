@@ -2,6 +2,9 @@ import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import React from 'react';
 import useBooks from '../../hooks/useBooks';
 
+/**
+ * Sorting Component
+ */
 const SortComp = () => {
   const { handleSort } = useBooks();
   return (

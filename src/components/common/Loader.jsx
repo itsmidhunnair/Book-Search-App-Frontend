@@ -1,6 +1,9 @@
 import React from 'react';
 import { CircularProgress } from '@mui/material';
 
+/**
+ * Renders a circular loader component
+ */
 const Loader = () => {
   return (
     <>

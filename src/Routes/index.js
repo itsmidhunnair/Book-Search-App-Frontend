@@ -8,7 +8,6 @@ const RouterComp = () => {
     <Routes>
       <Route path="/" element={<BookListing />} />
       <Route path="/book/:id" element={<BookDisplay />} />
-      <Route path="/:search/:index" element={<BookListing />} />
     </Routes>
   );
 };

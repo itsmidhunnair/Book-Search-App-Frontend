@@ -17,6 +17,9 @@ import {
 import Loader from "../common/Loader";
 import useBooks from "../../hooks/useBooks";
 
+/**
+ * Product Display Component
+ */
 const BookDisplay = () => {
   const { id } = useParams();
 

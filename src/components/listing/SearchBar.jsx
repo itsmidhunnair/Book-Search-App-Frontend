@@ -6,6 +6,9 @@ import { IconButton, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useForm } from "react-hook-form";
 
+/**
+ * Search Bar component
+ */
 const SearchBar = ({ submitSearch, search }) => {
   const { register, handleSubmit } = useForm();
 
